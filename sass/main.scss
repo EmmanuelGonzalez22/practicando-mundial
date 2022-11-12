@@ -3,16 +3,6 @@
 @import "global";
 @import "animaciones";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: rgb(52, 54, 54);
-}
-
 .header {
   height: 100vh;
   @include center;
@@ -22,17 +12,24 @@ body {
   font-size: 5vw;
 }
 main {
-  margin: 10vh auto;
+  margin: auto;
   width: 90%;
+  height: 100vh;
+  @include center;
   .container {
-    height: 100vh;
+    position: relative;
+    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     align-content: center;
     .gif-container {
       overflow: hidden;
+      visibility: hidden;
       @include center;
+      animation: focus-in 2s;
+      animation-delay: calc(2s * var(--item));
+      animation-fill-mode: forwards;
       img {
         width: 100%;
         height: 100%;
@@ -42,9 +39,9 @@ main {
   }
   .silueta-container {
     position: absolute;
-    left: 30%;
-    top: 110%;
-    width: 38%;
+    width: 45vh;
+    align-self: center;
+    justify-self: center;
     img {
       width: 100%;
       height: auto;
