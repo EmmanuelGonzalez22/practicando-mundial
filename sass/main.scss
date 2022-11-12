@@ -13,9 +13,10 @@
 }
 main {
   margin: auto;
-  width: 90%;
   height: 100vh;
+  padding: 0 5%;
   @include center;
+  overflow: hidden;
   .container {
     position: relative;
     height: 80vh;
