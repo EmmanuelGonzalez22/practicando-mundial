@@ -57,7 +57,7 @@ body {
 }
 
 /* ANIMACION GIF */
-@-webkit-keyframes focus-in {
+@-webkit-keyframes fade-in {
   0% {
     opacity: 1;
   }
@@ -96,7 +96,7 @@ body {
     visibility: initial;
   }
 }
-@keyframes focus-in {
+@keyframes fade-in {
   0% {
     opacity: 1;
   }
@@ -133,6 +133,33 @@ body {
   100% {
     opacity: 1;
     visibility: initial;
+  }
+}
+/* ANIMACION MESSI */
+@-webkit-keyframes messi-in {
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@keyframes messi-in {
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@-webkit-keyframes messi-out {
+  100% {
+    transform: translateX(100vw);
+  }
+}
+@keyframes messi-out {
+  100% {
+    transform: translateX(100vw);
   }
 }
 .header {
@@ -168,8 +195,8 @@ main .container .gif-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation: focus-in 2s;
-          animation: focus-in 2s;
+  -webkit-animation: fade-in 2s;
+          animation: fade-in 2s;
   -webkit-animation-delay: calc(2s * var(--item));
           animation-delay: calc(2s * var(--item));
   -webkit-animation-fill-mode: forwards;
@@ -185,9 +212,32 @@ main .silueta-container {
   width: 45vh;
   align-self: center;
   justify-self: center;
+  -webkit-animation: messi-out 2s;
+          animation: messi-out 2s;
+  -webkit-animation-delay: 21s;
+          animation-delay: 21s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 main .silueta-container img {
   width: 100%;
   height: auto;
   filter: brightness(0);
+}
+main .messi-container {
+  transform: translateX(-100vw);
+  position: absolute;
+  width: 45vh;
+  align-self: center;
+  justify-self: center;
+  -webkit-animation: messi-in 4s;
+          animation: messi-in 4s;
+  -webkit-animation-delay: 19s;
+          animation-delay: 19s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+main .messi-container img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

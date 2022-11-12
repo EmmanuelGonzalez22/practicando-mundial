@@ -31,7 +31,7 @@
 
 /* ANIMACION GIF */
 
-@keyframes focus-in {
+@keyframes fade-in {
   0% {
     opacity: 1;
   }
@@ -68,5 +68,22 @@
   100% {
     opacity: 1;
     visibility: initial;
+  }
+}
+
+/* ANIMACION MESSI */
+
+@keyframes messi-in {
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes messi-out {
+  100% {
+    transform: translateX(100vw);
   }
 }

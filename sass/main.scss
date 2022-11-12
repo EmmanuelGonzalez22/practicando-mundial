@@ -27,7 +27,7 @@ main {
       overflow: hidden;
       visibility: hidden;
       @include center;
-      animation: focus-in 2s;
+      animation: fade-in 2s;
       animation-delay: calc(2s * var(--item));
       animation-fill-mode: forwards;
       img {
@@ -42,10 +42,27 @@ main {
     width: 45vh;
     align-self: center;
     justify-self: center;
+    animation: messi-out 2s;
+    animation-delay: 21s;
+    animation-fill-mode: forwards;
     img {
       width: 100%;
       height: auto;
       filter: brightness(0);
+    }
+  }
+  .messi-container {
+    transform: translateX(-100vw);
+    position: absolute;
+    width: 45vh;
+    align-self: center;
+    justify-self: center;
+    animation: messi-in 4s;
+    animation-delay: 19s;
+    animation-fill-mode: forwards;
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }
