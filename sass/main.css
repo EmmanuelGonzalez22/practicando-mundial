@@ -43,19 +43,6 @@ body {
     color: #70a7d8;
   }
 }
-.wave {
-  -webkit-box-reflect: below -5px linear-gradient(transparent, rgba(0, 0, 0, 0.45));
-  display: inline-block;
-}
-
-.wave span {
-  display: inline-block;
-  -webkit-animation: wave-anim 2.5s infinite;
-          animation: wave-anim 2.5s infinite;
-  -webkit-animation-delay: calc(0.1s * var(--item));
-          animation-delay: calc(0.1s * var(--item));
-}
-
 /* ANIMACION GIF */
 @-webkit-keyframes fade-in {
   0% {
@@ -172,6 +159,17 @@ body {
   font: bold 2.5rem "lemon milk";
   font-size: 5vw;
 }
+.header .wave {
+  -webkit-box-reflect: below -5px linear-gradient(transparent, rgba(0, 0, 0, 0.45));
+  display: inline-block;
+}
+.header .wave span {
+  display: inline-block;
+  -webkit-animation: wave-anim 2.5s infinite;
+          animation: wave-anim 2.5s infinite;
+  -webkit-animation-delay: calc(0.1s * var(--item));
+          animation-delay: calc(0.1s * var(--item));
+}
 
 main {
   margin: auto;
@@ -196,8 +194,8 @@ main .container .gif-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation: fade-in 2s;
-          animation: fade-in 2s;
+  -webkit-animation: fade-in 1.5s;
+          animation: fade-in 1.5s;
   -webkit-animation-delay: calc(2s * var(--item));
           animation-delay: calc(2s * var(--item));
   -webkit-animation-fill-mode: forwards;
@@ -213,12 +211,22 @@ main .silueta-container {
   width: 45vh;
   align-self: center;
   justify-self: center;
-  -webkit-animation: messi-out 2s;
-          animation: messi-out 2s;
-  -webkit-animation-delay: 21s;
-          animation-delay: 21s;
+  -webkit-animation: messi-out 4s;
+          animation: messi-out 4s;
+  -webkit-animation-delay: 23s;
+          animation-delay: 23s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+@media (max-width: 991px) {
+  main .silueta-container {
+    -webkit-animation: messi-out 2s;
+            animation: messi-out 2s;
+    -webkit-animation-delay: 22s;
+            animation-delay: 22s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
 }
 main .silueta-container img {
   width: 100%;
@@ -231,12 +239,22 @@ main .messi-container {
   width: 45vh;
   align-self: center;
   justify-self: center;
-  -webkit-animation: messi-in 4s;
-          animation: messi-in 4s;
+  -webkit-animation: messi-in 8s;
+          animation: messi-in 8s;
   -webkit-animation-delay: 19s;
           animation-delay: 19s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+@media (max-width: 991px) {
+  main .messi-container {
+    -webkit-animation: messi-in 4s;
+            animation: messi-in 4s;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
 }
 main .messi-container img {
   width: 100%;
