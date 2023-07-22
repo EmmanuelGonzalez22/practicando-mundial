@@ -15,7 +15,7 @@ main {
       overflow: hidden;
       visibility: hidden;
       @include center;
-      animation: fade-in 1.5s infinite;
+      animation: fade-in 1.5s;
       animation-delay: calc(2s * var(--item));
       animation-fill-mode: forwards;
       img {
@@ -30,11 +30,11 @@ main {
     width: 45vh;
     align-self: center;
     justify-self: center;
-    animation: messi-out 4s infinite;
+    animation: messi-out 4s;
     animation-delay: 23s;
     animation-fill-mode: forwards;
     @include responsive(tablet) {
-      animation: messi-out 2s infinite;
+      animation: messi-out 2s;
       animation-delay: 22s;
       animation-fill-mode: forwards;
     }
@@ -50,11 +50,11 @@ main {
     width: 45vh;
     align-self: center;
     justify-self: center;
-    animation: messi-in 8s infinite;
+    animation: messi-in 8s;
     animation-delay: 19s;
     animation-fill-mode: forwards;
     @include responsive(tablet) {
-      animation: messi-in 4s infinite;
+      animation: messi-in 4s;
       animation-delay: 20s;
       animation-fill-mode: forwards;
     }
